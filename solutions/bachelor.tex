@@ -1,0 +1,73 @@
+
+\documentclass[
+    bachelor, 
+    %bigskip, % sets linespread factor to 1.5
+    propfont, % whether to use property fonts
+    %nofont, % remember to manally set the fonts
+    pdflinks,
+    %colorlinks,
+    %compact,
+    ] {../base/xjtuthesis}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstset{
+    numbers=left,
+    numberstyle= \tiny,
+    keywordstyle= \color{brown},
+    commentstyle= \color{gray},
+    basicstyle=\footnotesize\ttfamily,
+    frame=none,
+    backgroundcolor=\color[rgb]{0.95,0.95,0.95},
+    showstringspaces=false,
+    xleftmargin=2em,xrightmargin=2em, aboveskip=1em,
+    framexleftmargin=2em
+}
+
+\graphicspath{{figures/}}
+
+\begin{document}
+
+    \input{pages/meta.tex}
+
+    \xjtuchead
+    \xjtucinfopage
+    \xjtueinfopage
+    \xjtutoc
+    \clearpage
+
+    % 主要符号表，可以没有
+    %\input{pages/denotation.tex}
+
+    \xjtucontent
+
+        \input{pages/intro.tex}
+
+        \input{pages/chapter1.tex}
+        \input{pages/chapter2.tex}
+        \input{pages/chapter3.tex}
+        \input{pages/chapter4.tex}
+
+        \input{pages/conclusion.tex}
+
+    \xjtuendcontent
+
+    % 将你要引用的文献的 BibTeX 放入 bibliography.bib
+    \xjtubib{bibliography}
+
+    %\xjtuappendix
+
+        %\input{pages/appendice.tex}
+
+    %\xjtuendappendix
+
+    \xjtuspchapter{致谢}{致\qquad 谢}
+
+        \input{pages/acknowledgements.tex}
+
+\end{document}
+

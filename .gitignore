@@ -1,0 +1,17 @@
+*.aux
+*.blg
+*.out
+*.log
+*.bbl
+*.toc
+
+*.pdf
+.idea
+*.gz
+*.synctex
+*.synctex(busy)
+*.kilepr
+
+*~
+
+build/

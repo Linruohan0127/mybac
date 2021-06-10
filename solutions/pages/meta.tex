@@ -1,0 +1,81 @@
+
+% 标题，中文
+\ctitle{植物识别安卓客户端及其高性能网络服务器程序的设计与开发}
+
+% 作者，中文
+\cauthor{陈星宇}
+
+% 学科，中文，本科生不需要
+\csubject{}
+
+% 学院，专业，班级，中文，本科毕业论文需要
+\ccollege{电信}
+\cmajor{计算机科学与技术}
+\cclass{计算机75}
+
+% 设计所在单位，中文，本科毕业论文需要
+\corgnization{西安交通大学}
+
+% 学号
+\stunum{2175112000}
+
+% 导师姓名，中文
+\csupervisor{王龙翔}
+
+% 关键词，中文。用全角分号「；」分割
+% 研究生的应首先从《汉语主题词表》中摘选
+\ckeywords{图像识别；并发服务器；网络通信组件；反向代理}
+
+% 提交日期，本科生不需要
+\cproddate{\the\year 年\the\month 月}
+
+% 论文类型，中文，本科生不需要
+% 从理论研究、应用基础、应用研究、研究报告、软件开发、设计报告、案例分析、调研报告、其它中选择
+\ctype{}
+
+% 论文标题，英文
+\etitle{Design and development of plant recognition Android client and its high performance web server program}
+
+% 作者姓名，英文
+\eauthor{Chen xingyu}
+
+% 学科，英文，本科生不需要
+\esubject{}
+
+% 导师姓名，英文
+\esupervisor{Wang longxiang}
+
+% 关键词，英文。用半角分号和一个半角空格「; 」分割
+\ekeywords{Image recognition; Concurrent server; Network communication component; Reverse proxy}
+
+% 学科门类，英文
+% 从Philosophy（哲学）、Economics（经济学）、Law（法学）、Education（教育学）、Arts（文学）、
+%   Science（理学）、Engineering Science（工学）、Medicine（医学）、Management Science（管理学）中选择 
+\ecate{}
+
+% 提交日期，英文，本科生不需要
+% 应当和 cproddate 保持一致
+\eproddate{\monthname{\month}\ \the\year}
+
+% 论文类型，英文，本科生不需要
+% 从Theoretical Research（理论研究）、Application Fundamentals（应用基础）、Applied Research（应用研究）、
+%   Research Report（研究报告）、Software Development（软件开发）、Design Report（设计报告）、
+%   Case Study（案例分析）、Investigation Report（调研报告）、其它（Other）中选择
+\etype{}
+
+% 摘要，中文。段间空行
+\cabstract{
+
+生活中经常会遇到一些未知名称的常见植物，用户迫切需要方便地获取植物名称及信息。因此，本课题拟开发一种图像识别应用程序，该软件通过检测摄像头传入的图像数据，实现图像实时检测，满足相关用户需求。本项目的图形识别部分基于机器学习模型；应用程序客户端基于安卓平台；服务端程序基于linux平台开发。
+
+组件技术一直一来都是软件复用的利器。服务端程序起初仅用于传输安卓客户端的植物图像数据，之后逐渐改造成为了一个具体业务无关的通用网络通信基础组件。通用组件内部使用linux端I/O复用技术epoll，配合多种线程完成网络事件处理、业务逻辑处理，向用户屏蔽了底层的网络通信细节。此外，组件还提供了反向代理的功能，提供转发请求到应用服务器节点、负载均衡的能力。人们可以将自己的具体业务实现于此组件之上，无需关心OSI七层网络模型中传输层及以下的所有层，甚至通过组件提供的相应接口轻易地添加自己的应用层协议，达到快速部署的目的。
+
+}
+
+% 摘要，英文。段间空行
+\eabstract{
+In our daily life, we often encounter some common plants with unknown names, and users urgently need to get the names and information of plants conveniently. Therefore, this project plans to develop an image recognition application, the software through the detection of camera incoming image data, image real-time detection, to meet the needs of relevant users. The figure recognition part of this project is based on machine learning model; The application client is based on Android platform; The server program is developed based on Linux platform.
+
+Component technology has always been a great tool for software reuse. At first, the server program was only used to transmit the plant image data of Android client, and then gradually transformed into a general network communication basic component independent of specific services. The internal use of Linux terminal I/O reuse technology Epoll, with a variety of threads to complete network event processing, business logic processing, shielding the users from the underlying network communication details. In addition, the component provides reverse proxy capabilities, providing the ability to forward requests to application server nodes and load balancing. People can implement their specific services on top of this component without caring about the transport layer and all the layers below in the OSI seven-layer network model, and even easily add their own application layer protocols through the corresponding interfaces provided by the component, so as to achieve the purpose of rapid deployment.
+
+}
