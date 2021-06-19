@@ -7,13 +7,13 @@
 视频动作捕捉动画生成的整体流程如图x所示，首先利用RGB摄像头，如手机摄像头，采集单人运动视频。第一步将视频送入第三章中的二维人体姿态估计模型对每一帧中的主要人物目标的各关节坐标进行估计。第二步将得到的二维坐标序列送入第四章的三维人体姿态估计模型进行三维坐标的估计。第三步，搭建人体骨骼模型，将三维坐标序列转换为描述骨骼运动的欧拉角序列，并写为bvh动作描述文件。第四步创建人体角色模型，利用动画生成软件将bvh文件描述的动作序列绑定至模型。最终生成三维动画，可在动画引擎中进行播放。
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.4]{figures/27.png}
+	\includegraphics[scale=1]{figures/27.png}
 	\caption{视频动作捕捉动画生成整体框架}
 	\label{fig:f27}
 \end{figure}
 
 \section{实现细节}
-\subsection{Bvh文件设计}{}
+\subsection{bvh文件设计}{}
 综合考虑人体姿态信息的多样性和复杂性，为了最大限度表达人体姿态，同时考虑数据量因素，现该领域研究人员一般用人体各个关键点来估人体姿态信息。基于骨骼关键点方法首次由  Johansson 在其经典的移动灯显示实验提出。人体姿态的大部分信息由主要的关节关键点即可描述。由此，人体姿态估计领域的研究大多基于该描述方法。目前主流的数据集的标签也采用标注骨骼关键点的方式。例如上述Human3.6m数据集中的人体骨骼关节点定义如图\ref{fig:f12}所示。在本文进行三维人体姿态估计时，以上人体骨骼模型也成为了由模型预测结果转为动作描述文件的基础。
 由上一小节中对bvh文件的介绍可知，每个bvh文件描述一个运动目标，且运动目标由各个关节点构成，并以继承关系构建为骨骼树，具有唯一的父节点。故而对于本文所采集运动信息的人体目标，保留了21个人体关键关节点，设计并搭建了人体骨骼架构，具体的父子节点关系如下：
 
@@ -31,7 +31,7 @@
     'Spine': ['Thorax'],
     'Thorax': ['Neck', 'LeftShoulder', 'RightShoulder'],
     'Neck': ['HeadEndSite'],
-    'HeadEndSite': [],  # Head is an end site
+    'HeadEndSite': [],
     'LeftShoulder': ['LeftElbow'],
     'LeftElbow': ['LeftWrist'],
     'LeftWrist': ['LeftWristEndSite'],
@@ -67,16 +67,17 @@ self.initial_directions = {
     'RightWrist': [-1, 0, 0],
     'RightWristEndSite': [-1, 0, 0]
 }
+\end{lstlisting}
+
 由此构成了人体骨骼模型的默认形态。
 在人体解剖学中，骨骼的运动由关节运动主导，关节的运动与关节面形状贴合，而关节面形状也是在人体的长期活动中，肌肉作用下逐步获得、形成的，以上击力使得人体关节运动一般为绕某个轴进行的旋转运动。在上述简化的人体骨骼模型下，每个骨骼的旋转平面皆可由其他骨骼的方向定义，这为构造bvh文件数据部分的欧拉角任务提供了清晰明确、易于定义的旋转轴。故而针对根节点，即Hip节点保留3个Translation和3个Rotation共6个通道，其余子节点仅保留3个Ratation通道。生成的bvh文件样例附于附录。
 
-\end{lstlisting}
 \subsection{三维角色动作绑定}{}
 在进行三维角色动画创作的过程中，当已经创建了一个骨骼结构的动作后，需要将动作与目标的实际模型进行捆绑，使得动作可以在目标模型上展示和播放，这个过程通常称为三维动画角色动作绑定或骨骼绑定(3D character rigging for animation)。
 在本文的框架中，我们选择使用Autodesk的MotionBuilder软件，将上一小节生成的bvh文件与已有的人物模型进行绑定，MotionBuiler软件的图形工作界面如图\ref{fig:f28}所示。本文的工作利用其提供的Python借口进行动画的自动化生成。
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.4]{figures/28.png}
+	\includegraphics[scale=0.3]{figures/28.png}
 	\caption{MotionBuilder图形工作界面}
 	\label{fig:f28}
 \end{figure}
@@ -100,4 +101,4 @@ self.initial_directions = {
 \end{figure}
 
 \subsection{动作绑定}{}
-将上述模型对视频的预测结果，即三维关节点坐标转换为了关节旋转欧拉角，按照前述bvh文件设计生成了相应的bvh文件。在MotionBuilder软件中，对已有的人体角色模型进行了动作绑定，软件界面如图x，绑定结果如图x。
+将上述模型对视频的预测结果，即三维关节点坐标转换为了关节旋转欧拉角，按照前述bvh文件设计生成了相应的bvh文件。在MotionBuilder软件中，对已有的人体角色模型进行了bvh文件的动作绑定。
