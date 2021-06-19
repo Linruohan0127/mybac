@@ -30,7 +30,7 @@
 
 \section{模型与方法}
 所涉及的网络架构越来越复杂，在进行算法分析时的对照也愈加苦难，无法针对算法中的每一个细节设计进行细致准确且严谨的分析。故而本文希望在同时准确传局部信息和全局信息的同时构建更为简单的架构，采取了反卷积网络结构，利用热图进行二维人体姿态的估计。本文的模型将上采样与卷积参数利用反卷积层进行合并，而代替跳跃连接模块。
-为了加速卷积神经网络的训练，用其中的像素值表示关键点在该位置存在的概率的热图，能够提供更多的监督信息，而不仅仅是关节点坐标。如图\reg{fig:f18}所示，每个关节占据一个以目标关节位置为中心的二维高斯分布的热图通道。热图表示比坐标表示具有更强的鲁棒性，最近的研究大多基于热图表示。
+为了加速卷积神经网络的训练，用其中的像素值表示关键点在该位置存在的概率的热图，能够提供更多的监督信息，而不仅仅是关节点坐标。如图\ref{fig:f18}所示，每个关节占据一个以目标关节位置为中心的二维高斯分布的热图通道。热图表示比坐标表示具有更强的鲁棒性，最近的研究大多基于热图表示。
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.4]{figures/18.png}
@@ -61,7 +61,7 @@ AI Challenge 数据集, 其一共包含了大约 27 万幅图，同时含有人�
 OKS(object keypoint similarity)是目前常用的人体骨骼关键点检测算法的评价指标，这个指标启发于目标检测中的IoU指标，可以衡量估计的关节点位置与真实标签的相似度。
 其中p为图像中目标人体的标签，i为当前关节点，dpi为当前关节点估计值与真实值的欧氏距离，sp是第𝑝个人的区域面积，σi为关节点归一化因子，越难以估计准确的关节点σ越大，𝑣pi表示该关节点可见与否。
 二维人体姿态估计所采用的评价指标为平均精确度(AP, Average Precision)。对目标进行关键点检测后会获得一组关键点(DT)，最后会计算出GT与DT的相似度oks为一个标量，然后人为的给定一个阈值T，然后可以通过所有图片的oks计算AP，本实验中，设置T为10.
-训练过程中的准确率Accuracy曲线如图\reg{fig:f20}，其中准确率为PCK(Percentage of Correct Keypoints)，描述估计争取的关节点的占比。
+训练过程中的准确率Accuracy曲线如图\ref{fig:f20}，其中准确率为PCK(Percentage of Correct Keypoints)，描述估计争取的关节点的占比。
 本文将数据集中每个目标按照bounding box裁剪为分辨率为256:192的图像，并采用±30\%的缩放，±40°的旋转和翻转做数据增强。基本学习率为0.001，在90epoch后下降为0.0001，在120epoch后下降为0.00001，利用深度为50层的ResNet进项训练，训练及测试结果如下。
 \begin{figure}[h]
 	\centering
@@ -71,13 +71,13 @@ OKS(object keypoint similarity)是目前常用的人体骨骼关键点检测算�
 \end{figure}
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.4]{figures/21.png}
+	\includegraphics[scale=0.4]{figures/21.jpg}
 	\caption{coco部分测试数据关节点真实标注}
 	\label{fig:f21}
 \end{figure}
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.4]{figures/22.png}
+	\includegraphics[scale=0.4]{figures/22.jpg}
 	\caption{coco部分测试数据关节点估计结果}
 	\label{fig:f22}
 \end{figure}

@@ -67,9 +67,25 @@
 % 摘要，中文。段间空行
 \cabstract{
 
+计算机视觉为人类社会工业界的重要支柱技术之一。随着深度学习的广泛应用，计算机视觉中人体姿态估计(human pose estimation, HPE)任务被注入了新的活力。同时随着基于摄像头的计算机视觉解决方案的广泛铺开，人体姿态估计在人机交互、游戏、虚拟现实、视频监控、运动分析、医疗辅助等领域有着广泛的应用。本文基于单目摄像头的视频采集，利用深度神经网络，完成了视频序列中单人的人体姿态估计任务，并有效地利用提取出的动作制作了人体模型三维动画。
+
+人体姿态估计有诸多子课题，本文的工作主要聚焦在了单目单人RBG视频的三维人体姿态上。本文的工作选取了三维人体姿态估计中经典的两步提升思路，先将视频或图像中的人体关节点进行识别，预测出较为准确的二维坐标，再在此二维坐标结果的基础上预测出关节点的三维坐标。
+
+在二维人体姿态估计上，采用了ResNet结构加以反卷积层，生成高分辨率的热力图以预测二维坐标。在三维人体姿态估计上，采用了一维空洞卷积网络处理视频序列间的时序信息，最终生成人体关节点的三维坐标序列。
+
+最终，本文将人体姿态估计的实际应用场景定位在了动作捕捉三维角色动画生成上。利用上述的网络模型，针对日常的单人视频，提取出姿态序列。将其转换为动作捕捉记录文件类型后，对人体模型进行动作绑定，进而制作生动流畅还原度较高的三维角色动画。
+
 }
 
 % 摘要，英文。段间空行
 \eabstract{
+
+Computer vision is one of the important pillar technologies of human society industry.With the wide application of deep learning, the task of Human Pose Estimation (HPE) in computer vision has been injected with new vitality.At the same time, with the wide spread of camera-based computer vision solutions, human pose estimation has a wide range of applications in human-computer interaction, games, virtual reality, video surveillance, motion analysis, medical assistance and other fields.In this paper, based on the video collection of monocular camera, the deep neural network is used to complete the single human body pose estimation task in the video sequence, and the 3D animation of human body model is made effectively by using the extracted actions.
+
+There are many subsubjects of body pose estimation, and the work of this paper mainly focuses on the three-dimensional body pose of monocular single-person RBG video.The work of this paper selects the classical two-step lifting idea in 3D body pose estimation. First, the body nodes in the video or image are identified to predict the more accurate 2D coordinates, and then the 3D coordinates of the nodes are predicted on the basis of the 2D coordinate results.
+
+Resnet structure and deconvolution layer are used to estimate the two-dimensional body posture. Heat map is generated to predict the two-dimensional coordinates.In 3D body pose estimation, a one-dimensional void convolutional network is used to process the time sequence information between video sequences, and finally generates the 3D coordinate sequence of human body nodes.
+
+Finally, the actual application scene of human pose estimation is positioned in motion capture 3D character animation.Using the above network model, pose sequence is extracted for daily single person video.After converting it into motion capture record file type, action binding is carried out on the human model to produce vivid and smooth 3D character animation with high restoring degree.
 
 }
