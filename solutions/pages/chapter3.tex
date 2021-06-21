@@ -29,7 +29,7 @@
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.2]{figures/23.png}
+	\includegraphics[scale=0.3]{figures/23.png}
 	\caption{三维人体姿态估计模型网络结构}
 	\label{fig:f23}
 \end{figure}
@@ -38,7 +38,7 @@
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.6]{figures/24.png}
+	\includegraphics[scale=0.4]{figures/24.png}
 	\caption{树状网络模型(W=3,B=3)\textsuperscript{\cite{p26}}}
 	\label{fig:f24}
 \end{figure}
@@ -61,13 +61,14 @@ PI-INF-3DHP 数据集，由 Max Planck Institute for Informatics 制作，是一
 
 本文采用Adam优化器，设置learning rate=0.001， decay=0.95，同时batch size=1024对Human3.6m数据集进行80 epoches的训练，训练及测试结果如下所示。
 
+在针对Human3.6m数据集的姿态估计中，本文的方法可以流畅准确地还原出人体的三维动作，以该视频为例，本文的工作的输出结果与真实标注的差异如图\ref{fig:f26}所示。可见估计结果中的三维姿态强依赖于二维关节点坐标，基本保证了三维姿态到相机坐标系的重投影与二维姿态一致。
+
 \begin{figure}[h]
 	\centering
 	\includegraphics[scale=0.8]{figures/25.png}
 	\caption{三维人体姿态估计模型MPJPE-Epoch曲线}
 	\label{fig:f25}
 \end{figure}
-
 
 \begin{table}[h]
     \caption{\label{tab:t3}二维人体姿态估计模型测试结果}
@@ -92,7 +93,6 @@ PI-INF-3DHP 数据集，由 Max Planck Institute for Informatics 制作，是一
 \end{table}
 
 
-在针对Human3.6m数据集的姿态估计中，本文的方法可以流畅准确地还原出人体的三维动作，以该视频为例，本文的工作的输出结果与真实标注的差异如图\ref{fig:f26}所示。可见估计结果中的三维姿态强依赖于二维关节点坐标，基本保证了三维姿态到相机坐标系的重投影与二维姿态一致。
 
 \begin{figure}[h]
 	\centering
