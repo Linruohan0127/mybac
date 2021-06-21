@@ -1,36 +1,240 @@
-@Article{ niubi-paper,
-	title = "既发散又收敛的无穷级数",
-	author = "张慧",
-	journal = "陕西师范大学学报",
-	year = "2004"
+@inproceedings{p30,
+  title={A Simple Yet Effective Baseline for 3d Human Pose Estimation},
+  author={ Martinez, J.  and  Hossain, R.  and  Romero, J.  and  Little, J. J. },
+  booktitle={2017 IEEE International Conference on Computer Vision (ICCV)},
+  year={2017},
 }
 
-@Article{epoll_perf,
-	title = "Linux下高性能网络I/O解决方案分析",
-	author = "张轶凡，卢正兴，王芙蓉",
-	journal= "《现代计算机：下半月版》2006年第11期 16-19,共4页",
-	year = "2006"
+@inproceedings{p29,
+  title={Deep residual learning for image recognition},
+  author={He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+  booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+  pages={770--778},
+  year={2016}
 }
 
-@Article{cpp17threadpool,
-	title = "A C++17 Thread Pool for High-Performance Scientific Computing",
-	author = "Barak Shoshany",
-	journal= "arXiv preprint arXiv:2105.00613",
-	year = "2021"
+@inproceedings{p28,
+  title={Aggregated Residual Transformations for Deep Neural Networks},
+  author={ Xie, S.  and  Girshick, R.  and P Dollár and  Tu, Z.  and  He, K. },
+  booktitle={IEEE},
+  year={2016},
+ abstract={We present a simple, highly modularized network architecture for image classification. Our network is constructed by repeating a building block that aggregates a set of transformations with the same topology. Our simple design results in a homogeneous, multi-branch architecture that has only a few hyper-parameters to set. This strategy exposes a new dimension, which we call "cardinality" (the size of the set of transformations), as an essential factor in addition to the dimensions of depth and width. On the ImageNet-1K dataset, we empirically show that even under the restricted condition of maintaining complexity, increasing cardinality is able to improve classification accuracy. Moreover, increasing cardinality is more effective than going deeper or wider when we increase the capacity. Our models, codenamed ResNeXt, are the foundations of our entry to the ILSVRC 2016 classification task in which we secured 2nd place. We further investigate ResNeXt on an ImageNet-5K set and the COCO detection set, also showing better results than its ResNet counterpart.},
+}
+
+@article{p27,
+  title={Human3.6M: Large Scale Datasets and Predictive Methods for 3D Human Sensing in Natural Environments},
+  author={ Ionescu, C.  and  Papava, D.  and  Olaru, V.  and  Sminchisescu, C. },
+  journal={IEEE Transactions on Pattern Analysis & Machine Intelligence},
+  volume={36},
+  number={7},
+  pages={1325-1339},
+  year={2014},
+ abstract={We introduce a new dataset, Human3.6M, of 3.6 Million accurate 3D Human poses, acquired by recording the performance of 5 female and 6 male subjects, under 4 different viewpoints, for training realistic human sensing systems and for evaluating the next generation of human pose estimation models and algorithms. Besides increasing the size of the datasets in the current state-of-the-art by several orders of magnitude, we also aim to complement such datasets with a diverse set of motions and poses encountered as part of typical human activities (taking photos, talking on the phone, posing, greeting, eating, etc.), with additional synchronized image, human motion capture, and time of flight (depth) data, and with accurate 3D body scans of all the subject actors involved. We also provide controlled mixed reality evaluation scenarios where 3D human models are animated using motion capture and inserted using correct 3D geometry, in complex real environments, viewed with moving cameras, and under occlusion. Finally, we provide a set of large-scale statistical models and detailed evaluation baselines for the dataset illustrating its diversity and the scope for improvement by future work in the research community. Our experiments show that our best large-scale model can leverage our full training set to obtain a 20% improvement in performance compared to a training set of the scale of the largest existing public dataset for this problem. Yet the potential for improvement by leveraging higher capacity, more complex models with our large dataset, is substantially vaster and should stimulate future research. The dataset together with code for the associated large-scale learning models, features, visualization tools, as well as the evaluation server, is available online at http://vision.imar.ro/human3.6m.},
+}
+
+@inproceedings{p26,
+  title={3D Human Pose Estimation in Video With Temporal Convolutions and Semi-Supervised Training},
+  author={ Pavllo, D.  and  FeichtenhofEr, C.  and  GrangiEr, D.  and  Auli, M. },
+  booktitle={2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2020},
+ abstract={In this work, we demonstrate that 3D poses in video can be effectively estimated with a fully convolutional model based on dilated temporal convolutions over 2D keypoints. We also introduce back-projection, a simple and effective semi-supervised training method that leverages unlabeled video data. We start with predicted 2D keypoints for unlabeled video, then estimate 3D poses and finally back-project to the input 2D keypoints. In the supervised setting, our fully-convolutional model outperforms the previous best result from the literature by 6 mm mean per-joint position error on Human3.6M, corresponding to an error reduction of 11%, and the model also shows significant improvements on HumanEva-I. Moreover, experiments with back-projection show that it comfortably outperforms previous state-of-the-art results in semi-supervised settings where labeled data is scarce. Code and models are available at https://github.com/facebookresearch/VideoPose3D.},
+}
+
+@article{p25,
+  title={Simple Baselines for Human Pose Estimation and Tracking},
+  author={ Xiao, B.  and  Wu, H.  and  Wei, Y. },
+  journal={arXiv e-prints},
+  year={2018},
+ abstract={There has been significant progress on pose estimation and increasing interests on pose tracking in recent years. At the same time, the overall algorithm and system complexity increases as well, making the algorithm analysis and comparison more difficult. This work provides simple and effective baseline methods. They are helpful for inspiring and evaluating new ideas for the field. State-of-the-art results are achieved on challenging benchmarks. The code will be available at https://github.com/leoxiaobin/pose.pytorch.},
+}
+
+@article{p24,
+  title={Cascaded Pyramid Network for Multi-Person Pose Estimation},
+  author={ Chen, Y.  and  Wang, Z.  and  Peng, Y.  and  Zhang, Z.  and  Yu, G.  and  Sun, J. },
+ abstract={The topic of multi-person pose estimation has been largely improved recently, especially with the development of convolutional neural network. However, there still exist a lot of challenging cases, such as occluded keypoints, in- visible keypoints and complex background, which cannot be well addressed. In this paper, we present a novel network structure called Cascaded Pyramid Network (CPN) which targets to relieve the problem from these "hard" keypoints. More specifically, our algorithm includes two stages: Glob- alNet and RefineNet. GlobalNet is a feature pyramid net- work which can successfully localize the "simple" key- points like eyes and hands but may fail to precisely rec- ognize the occluded or invisible keypoints. Our RefineNet tries explicitly handling the "hard" keypoints by integrat- ing all levels of feature representations from the Global- Net together with an online hard keypoint mining loss. In general, to address the multi-person pose estimation prob- lem, a top-down pipeline is adopted to first generate a set of human bounding boxes based on a detector, followed by our CPN for keypoint localization in each human bounding box. Based on the proposed algorithm, we achieve state-of- art results on the COCO keypoint benchmark, with average precision at 73.0 on the COCO test-dev dataset and 72.1 on the COCO test-challenge dataset, which is a 19% rela- tive improvement compared with 60.5 from the COCO 2016 keypoint challenge.},
+}
+
+@inproceedings{p23,
+  title={Stacked Hourglass Networks for Human Pose Estimation},
+  author={ Newell, A.  and  Yang, K.  and  Jia, D. },
+  booktitle={European Conference on Computer Vision},
+  year={2016},
+ abstract={This work introduces a novel convolutional network architecture for the task of human pose estimation. Features are processed across all scales and consolidated to best capture the various spatial relationships associated with the body. We show how repeated bottom-up, top-down processing used in conjunction with intermediate supervision is critical to improving the performance of the network. We refer to the architecture as a "stacked hourglass" network based on the successive steps of pooling and upsampling that are done to produce a final set of predictions. State-of-the-art results are achieved on the FLIC and MPII benchmarks outcompeting all recent methods.},
+}
+
+@article{p22,
+  title={Deep Learning Based 2D Human Pose Estimation:A Survey},
+  author={ Dang, Q.  and  Yin, J.  and  Wang, B.  and  Zheng, W. },
+  journal={Tsinghua Science and Technology},
+  year={2019},
+ abstract={Human pose estimation has received significant attention recently due to its various applications in the real world. As the performance of the state-of-the-art human pose estimation methods can be improved by deep learning, this paper presents a comprehensive survey of deep learning based human pose estimation methods and analyzes the methodologies employed. We summarize and discuss recent works with a methodologybased taxonomy. Single-person and multi-person pipelines are first reviewed separately. Then, the deep learning techniques applied in these pipelines are compared and analyzed. The datasets and metrics used in this task are also discussed and compared. The aim of this survey is to make every step in the estimation pipelines interpretable and to provide readers a readily comprehensible explanation. Moreover, the unsolved problems and challenges for future research are discussed.},
+}
+
+@article{p21,
+  title={Monocular Human Pose Estimation: A Survey of Deep Learning-based Methods},
+  author={Y Chen and Y Tian and  He, M. },
+  journal={Computer Vision and Image Understanding},
+  volume={192},
+ abstract={Vision-based monocular human pose estimation, as one of the most fundamental and challenging problems in computer vision, aims to obtain posture of the human body from input images or video sequences. The recent developments of deep learning techniques have been brought significant progress and remarkable breakthroughs in the field of human pose estimation. This survey extensively reviews the recent deep learning-based 2D and 3D human pose estimation methods published since 2014. This paper summarizes the challenges, main frameworks, benchmark datasets, evaluation metrics, performance comparison, and discusses some promising future research directions.},
+}
+
+@article{p20,
+  title={A survey on monocular 3D human pose estimation},
+  author={ Ji, X.  and  Fang, Q.  and  Dong, J.  and  Shuai, Q.  and  Jiang, W.  and  Zhou, X. },
+  journal={Virtual Reality & Intelligent Hardware},
+  volume={2},
+  number={ 6},
+  pages={471-500},
+  year={2020},
+ abstract={Recovering human pose from RGB images and videos has drawn increasing attention in recent years owing to minimum sensor requirements and applicability in diverse fields such as human-computer interaction, robotics, video analytics, and augmented reality. Although a large amount of work has been devoted to this field, 3D human pose estimation based on monocular images or videos remains a very challenging task due to a variety of difficulties such as depth ambiguities, occlusion, background clutters, and lack of training data. In this survey, we summarize recent advances in monocular 3D human pose estimation. We provide a general taxonomy to cover existing approaches and analyze their capabilities and limitations. We also present a summary of extensively used datasets and metrics, and provide a quantitative comparison of some representative methods. Finally, we conclude with a discussion on realistic challenges and open problems for future research directions.},
+}
+
+@phdthesis{p19,
+  title={基于深度学习的智能体角色动画自动生成技术研究},
+  author={吴新月},
+  school={浙江大学},
+ abstract={智能体角色动画自动生成在本质上是对具有自主智能行为的生命体的仿真,在影视特效制作、游戏中的非玩家角色控制、虚拟现实、仿真测试等领域都有重要应用前景。它不仅需要对智能体的内在行为模式和决策进行仿真建模(行为建模),也需要对智能体的外在行为进行真实呈现(角色动画),从而使得智能体能够与外部环境进行自主和逼真的互动。本文针对无人驾驶任务中的智能算法仿真测试需求,设计开发了自主智能行为的生命体仿真工具,并重点对双足(人)和四足(牲畜)两种智能体的角色动画自动方法进行了研究,主要工作如下:1)智能体的内部行为模式与决策仿真(行为建模)。引入智能体对角色进行行为建模,把角色作为一个独立的行为者,能够对仿真环境信息进行感知,规划路径,然后进行行为控制决策。通过对角色进行基于智能体的行为建模,能提高角色动画的自主性和智能性。2)智能体行为的外部呈现(角色动画)。对于双足和四足智能体角色分别设计实现了基于深度学习的角色动画自动生成的解决方案,使得两种角色能够根据地势高低实时的做出连贯的,具有真实感和多样性的动作。3)智能体角色动画自动生成解决方案与原型系统。对以上关键技术进行整合形成最终的解决方案,并初步实现了一个智能体角色动画自动生成原型系统。系统通过实现多个具有代表性的角色动画场景对本文提出的解决方案进行了测试和验证。},
+}
+
+@phdthesis{p18,
+  title={基于混合特征的移动机器人同步定位与建图算法研究},
+  author={郑泽玲},
+  school={北京工业大学},
+ abstract={随着人工智能产业的兴起对机器人的智能化提出了更高的要求,其中基于视觉的同步定位和建图(Simultaneous Localization and Mapping,SLAM)技术,具有获取信息丰富,成本较低等特点逐渐广泛应用在服务机器人,自动驾驶,VR(Virtual Reality)等领域.目前视觉SLAM主要有特征点法,直接法等,但均存在自身的局限性.特征点法主要利用图像中的点特征来进行位姿估计,在一些环境包含点特征较少的情况下影响算法效果.针对上述问题,本文提出了一种基于混合特征模型的SLAM算法.首先,自主搭建了全向移动平台,以便采集图像信息并构建了基于环境词典的加速匹配模型;其次,针对特征点法在点特征不足环境下效果较差的问题,本文提出了混合特征模型进行位姿估计;最后,本文采用基于最大共视权重帧的优化策略对位姿进行优化并最终完成地图的构建.论文主要研究内容有如下几个方面:(1)构建二进制环境词典及加速匹配模型针对特征点SLAM算法通常加载文本类型词典耗时较长且场景针对性较弱的问题,本文构建了二进制环境词典及特征加速匹配模型.利用深度相机进行图像数据采集并对深度图进行滤波去噪,提取彩色图像中的点特征并采用Bow(Bag of words)库对图像点特征进行聚类生成词典,使用BOOST库将词典转为二进制文件并根据环境词典构建加速匹配模型.加速匹配模型缩小了特征匹配范围且对比文本类型词典本文所建词典取得较好效果.(2)基于混合特征模型的机器人状态估计方法针对点特征进行位姿估计时在特征不足或缺失的情况下位姿估计效果较差的问题,本文提出了基于混合特征的位姿估算方法.提取图像中的点线特征并利用改进随机采样一致算法(Random sample consensus,RANSAC)剔除错误的匹配特征.然后根据特征点采用EPnP(Efficient Perspective-n-Point)方法估算机器人位姿.此外本文根据灭点原理提出了一种基于单幅图像中线段特征估算位姿方法,将两种估算结果融合后提高了算法鲁棒性.(3)基于最大共视权重帧的全局优化和地图创建针对后端优化计算量大以及点云地图所占内存较多的问题,本文提出了一种基于最大共视权重帧的全局优化方法.在得到关键帧后,统计关键帧之间的共视地图点的数量作为共视权重,通过设定共视权重阈值来控制参与优化的关键帧.得到优化结果后将点云图转为八叉树地图并最终完成创建全局一致的地图.将本文所提算法与ORBSALM算法进行对比,使用TUM公开的RGBD数据集中fr1/room和fr2/desk对二者进行测试.相比于ORBSLAM算法,采用本文所提的基于混合特征的移动机器人同步定位和地图创建方法均方根误差分别下降2.27cm,4.87cm,验证了算法的有效性.利用自主搭建的全向移动平台在实际环境中进行机器人同步定位和地图构建最终得到了全局一致的地图.},
+}
+
+@phdthesis{p17,
+  title={基于深度学习的3D人体姿态估计研究},
+  author={谢子威},
+  school={北京邮电大学},
+  year={2019},
+ abstract={3D人体姿态估计是目前最热门的研究领域之一,其主要目的是从图像或视频中对人体关节点位置进行估计,进而组成一个完整的人体姿态.3D人体姿态估计可以作为人体姿态识别,行为识别,人体跟踪等任务的基础,同时也在康复医疗,视频监控,高级人机交互等领域具有很高的应用价值.近几年来,随着以神经网络为核心的深度学习在多个领域的成功应用,具有强大的学习能力的深度神经网络也逐渐成为了如3D人体姿态估计在内的复杂任务的最佳选择,而在最新的研究中也再次验证了其优异性.所以本文针对3D人体姿态估计中遮挡干扰等问题,在深度学习的框架下,提出了对网络结构及几何约束的改进,具体内容如下:1.目前3D人体姿态估计方法中在对3D人体关节点进行回归时都没有充分考虑到图像的空间特性.所以本文以提升3D人体关节点回归对图像空间特性的捕捉能力作为切入点,提出一个基于多尺度重校验方法的3D人体姿态估计网络模型,通过迁移学习的方式向原网络中引入用于捕捉多个尺度下图像空间特性的重校验旁路,进而提升3D人体姿态估计的准确性.本文从定量和定性的角度对网络模型有效性进行了验证,并在Human3.6m人体姿态标注数据集上取得了具有竞争力的结果.2.针对人体姿态进行估计时出现一些特殊的姿态,仅考虑对网络进行优化对于该类特殊姿态的估计效果提升是有限的,需要引入人体几何约束.由此本文提出了一个更强的人体姿态几何约束模型,并将其运用于3D人体姿态估计的半监督学习中,该模型从关节点位置,骨骼长度及关节角度三个方面对人体姿态进行约束,同时将其应用于损失层,并进行了有效性分析,最后在定量和定性角度进行了对比实验,并对结果进行了分析与验证.},
+}
+
+@phdthesis{p16,
+  title={基于3D骨架的肢体动作识别研究},
+  author={陈星宏},
+  school={电子科技大学},
+  year={2019},
+ abstract={肢体动作识别因为其在智能视频监控,人机交互,辅助技术等领域的重要作用,越来越受到人们的广泛关注.然而由于人体姿态本身的多样性,以及动作语义的模糊性和肢体运动的多变性,使得动作识别在多个方面都面临着重大的挑战.目前,铰接式的人体姿态(也被称为骨架)能为描述人体动作提供非常好的表征,那么如何获取人体关节点,并且分析关节点在运动时的相关性,以此来达到动作识别的目的便成为了难点问题.本文主要针对以上问题,提出了一种基于非参数编码约束的匹配方法提取人体3D骨架,并利用所得骨架序列建立人体骨架时空图,通过图卷积神经网络来完成人体动作分类任务,最终将以上各部分应用于VR交互过程,实现人体动作识别在该领域的应用.论文中主要工作内容与创新点如下:(1)针对从单目摄像机所采集图像中提取人体3D骨架的问题,我们将其分为三个部分进行,分别是首先使用Openpose开源库提取人体2D骨架信息,其次通过分析2D与3D骨架的空间关系,基于非参编码约束建立人体姿态库,最终以欧氏距离为标准,利用匹配的方法在姿态库中找到2D骨架其对应的3D骨架.整个算法不仅提高了3D骨架提取的准确性,并且保证了骨架提取过程的实时性.(2)对于人体动作分类问题,我们使用人体3D骨架序列,构建人体骨架时空图,使其充分包含人体动作的时空信息,然后利用图卷积神经网络来提取时空图中的特征,从而将原问题转换为图的特征提取问题.在此过程中,我们构建了对于人体骨架时空图的图卷积核,并为根节点的感受野子集划分问题提供不同的划分策略.最终搭建图卷积神经网络模型,通过实验证明该模型在自己处理的数据集上取得了很好的效果.(3)以973深空探测器组合自主导航项目为依托,并将其中的虚拟现实模块作为应用场景,搭建深空探测器VR显示仿真平台.创新性的将肢体动作识别应用于VR交互领域,利用所研究的人体3D骨架提取,图卷积人体动作分类技术,串联成较为完整的闭环交互模式,并且探讨了人体动作语义与一般人机交互过程的关系.最终利用实验证实其可行性,与各个交互环节的可靠性.},
+}
+
+@phdthesis{p15,
+  title={基于跨阶段深度网络的人体姿态分析},
+  author={周亚辉},
+  school={合肥工业大学},
+ abstract={在计算机视觉中,基于图像的人体姿态估计是一项重要而又具有挑战性的任务。它是指在给定图像中对目标人物的关节点位置进行定位,基于图像的人体姿态估计是一些计算机视觉高级任务的基础,如人类行为识别、图像检索等。然而由于人体肢体的关节复杂度、遮挡以及混杂背景等情况的影响,准确定位关节点位置仍然具有挑战性。在现有的人体姿态估计方法的研究基础上,引入一种跨阶段的结构来定位图像中目标人物的关节点,提升了定位的准确度,并设计有效的基于可信关节点置信度推理的方法来对检测结果较差的人体关节点进行改进的后处理技术。本文的主要工作如下:(1)阐述了人体姿态估计的基本流程,按照非深度和深度模型介绍了几个经典的人体姿态估计模型并分析了它们各自的优缺点,为论文工作的开展奠定了理论基础。(2)设计了一种跨阶段结构的人体姿态估计模型,该模型通过第一阶段网络提取初始特征,并采用多阶段网络模型描述不同尺度下特征对关节点定位的作用。同时,利用跨阶段方式将该初始特征与各尺度特征串联,设计了一种多尺度关节点定位的联合损失,缩短了输出端定位误差到各尺度定位误差的计算路径,实现有效的人体关节点初始特征学习。(3)针对人体姿态估计模型难以对遮挡姿态进行有效处理的问题,本文设计了一种基于可信关节点的置信度推理过程的模型。将姿态估计模型输出的各关节点置信度图进行关节点可见性判断,将其分为两组可信的与不可信的关节点,留取可信的关节点置信度图,并根据人体任意两个关节点之间的高斯条件分布,对遮挡导致的不可信关节点进行置信度推理以实现对遮挡姿态的有效处理,提升了本文模型在遮挡情况下的鲁棒性。},
+}
+
+@phdthesis{p14,
+  title={基于Kinect动作驱动的三维细微面部表情实时模拟},
+  author={梁海燕},
+  school={燕山大学},
+ abstract={产生引人注目的动态面部表情动画在计算机图形学中是一个具有挑战性的方面.近年来,虚拟角色越来越多的出现在计算机游戏,广告以及电影制作中,使得具有细微面部表情的角色动画变得越来越重要.本文提出一种生成三维细微面部表情实时动画的新技术,驱动三维面部网格模型生成带有细微面部表情特征运动的虚拟三维角色动画. 首先,为了实时捕获用户的不同表情状态特征,利用微软的Kinect3D体感摄影机对用户的面部表情进行实时的跟踪,通过分析捕捉得到的人脸运动数据,将运动数据分解为两个部分:头部的刚性运动和面部表情的运动.相对于依赖特定硬件设备的人体运动捕捉系统来说,Kinect降低了系统的硬件成本和调试维护费用,并且对于自然环境的复杂背景具有很好的适应性. 其次,在用户面部表情的捕获和数据处理的基础上,利用拉普拉斯坐标局部细节保留的性质,使用拉普拉斯变形的方法把捕获的面部表情映射到一个中性的三维人脸模型上,对虚拟的三维人脸模型进行姿态重建,产生具有睁眼闭眼和嘴部运动等与用户表情状态一致的虚拟三维角色动画. 再次,为了产生带有皱纹等细微面部表情特征的实时表情动画,生成带有毛孔,胡须以及凹凸不平粗糙感的皮肤纹理,利用GPU进行光照和法线贴图渲染,再根据Kinect捕获的动作单元计算动态纹理映射和皱纹产生的权重,并通过引入皱纹函数实时模拟皱纹运动状态,产生动作驱动的面部表情实时动画. 最后,利用专业图形程序接口OpenGL和高级着色语言GLSL设计并实现了实时细微面部表情仿真系统.实验表明,利用本文的方法可以产生动作驱动的逼真细微面部表情实时动画,适用于数字娱乐,视频会议等领域.},
+}
+
+@phdthesis{p13,
+  title={数据驱动的人体骨骼运动合成研究},
+  author={樊璐},
+  school={长安大学},
+ abstract={人体运动合成技术是虚拟现实领域中的一个重点研究内容,在娱乐,教育和军事等领域被广泛应用.模型驱动和数据驱动是目前运动合成的两个主要途径,本文采用的基于数据驱动的人体运动合成更易于构建逼真度高,自然性良好的人体动画.当前,由于运动捕捉技术制作成本较大,加之人体运动的高度复杂性,给运动数据重用带来很大阻碍.针对这种情况,论文围绕人体运动捕捉数据,展开对人体骨骼运动合成的关键技术和方法进行研究.具体研究内容如下:1,单个运动序列的编辑.由于每个运动序列的朝向,位移信息不一样,要保证两个或两个以上运动序列的合成,首先要使待合成的运动序列朝向和行径方向大体一致,这是人体骨骼运动合成的基础.本文采用矩阵旋转,平移和缩放操作对单个运动序列数据进行计算,使得可以任意改变某个运动序列在虚拟场景中的运动信息.2,人体运动相似性计算.只有相似并存在较为自然的运动过渡可能的运动序列之间才能进行有效的运动合成.本文采用欧式距离计算等长运动序列的相似性;使用动态时间变形算法(DTW)完成不等长运动序列间的相似性计算.3,常用运动过渡方法实验比较.对基于空间位置插值合成,基于人体运动姿势的四元数插值和基于逆向运动学的插值算法进行实验,分析比较三个算法的实验结果,得出它们存在手工交互量大和样本依赖性大的结论.4,基于多维拉普拉斯坐标的运动过渡编辑.三维拉普拉斯坐标可以有效保持三维空间内几何数据的局部特征,由于人体捕捉运动数据的维度高,为了保持运动序列有效控制关节点在时间上的时序特性,本文采用多维的拉普拉斯坐标.将两段待合成的人体运动数据映射为多维向量空间中用顶点集合表示的曲线段,每个点代表运动数据某一帧若干个通道的数据信息,数据间的时序关系则是用点之间的邻域关系来表示的,使用多维拉普拉斯坐标保持法对映射的两段曲线进行编辑和拼接,生成运动过渡序列片段.实验表明,多维拉普拉斯坐标的运动合成方法人机交互量少,样本依赖程度较低,可以提高已有数据的重用性.},
+}
+
+@inproceedings{p12,
+  title={Optimizing Network Structure for 3D Human Pose Estimation},
+  author={ Hai, C.  and  Wang, C.  and  Ma, X.  and  Wang, Y. },
+  booktitle={2019 IEEE/CVF International Conference on Computer Vision (ICCV)},
+  year={2019},
+ abstract={A human pose is naturally represented as a graph where the joints are the nodes and the bones are the edges. So it is natural to apply Graph Convolutional Network (GCN) to estimate 3D poses from 2D poses. In this work, we propose a generic formulation where both GCN and Fully Connected Network (FCN) are its special cases. From this formulation, we discover that GCN has limited representation power when used for estimating 3D poses. We overcome the limitation by introducing Locally Connected Network (LCN) which is naturally implemented by this generic formulation. It notably improves the representation capability over GCN. In addition, since every joint is only connected to a few joints in its neighborhood, it has strong generalization power. The experiments on public datasets show it: (1) outperforms the state-of-the-arts; (2) is less data hungry than alternative models; (3) generalizes well to unseen actions and datasets.},
+}
+
+@book{p11,
+  title={Propagating LSTM: 3D Pose Estimation Based on Joint Interdependency},
+  author={ Lee, K.  and  Lee, I.  and  Lee, S. },
+  publisher={Computer Vision – ECCV 2018},
+  year={2018},
+ abstract={We present a novel 3D pose estimation method based on joint interdependency (JI) for acquiring 3D joints from the human pose of an RGB image. The JI incorporates the body part based structural...},
+}
+
+@phdthesis{p10,
+  title={基于深度学习的缺陷检测算法研究},
+  author={庞博},
+  school={西安电子科技大学},
+  year={2020},
+ abstract={我国是制造业大国,制造生产厂商众多。现在大部分的生产企业依然采用传统的机器视觉方法(即通过对图像的阈值分割、滤波、颜色统计等方法)甚至用人工去检测缺陷。但是随着生产水平不断地提高,传统的机器视觉处理方法在精度上慢慢无法满足制造业的需求,同时也难以解决缺陷的目标检测问题。与此同时,深度学习蓬勃发展,并且深度学习在很多领域取得了令人惊喜的成果。所以很自然的人们开始将缺陷检测与深度学习联系在一起。在缺陷检测问题中,最为基本的问题是缺陷分类问题。本文通过研究三种经典的神经网络模型:VGGNet、ResNet以及GoogLeNet,分析并学习他们的优点和思路,提出了改进后的三种神经网络:VGGNet-ch、ResNet-ch以及GoogLeNet-ch。这三种网络通过调整其输入输出尺寸,改变卷积层的数量及卷积核尺寸,增加或删除全连接层及其中神经元的数量,构造出更适合提取特征的网络。将三种网络应用在竹筷缺陷分类问题上,其准确率相对原始网络有明显提高。同时,为了减少在神经网络构建时人工调参的频率,从而降低解决缺陷分类问题的难度,本文提出了两种神经网络结构搜索算法:神经网络深度自增长算法以及基于简单爬山算法的神经网络结构搜索算法。通过使用这两种神经网络结构搜索算法,神经网络能够在训练中不断地增加卷积层或降采样层,从而使得神经网络的深度更深、宽度更广,最终可以训练得到一个适合当前缺陷数据集的神经网络。在当前数据集上,该神经网络能够做到与手工调参所得神经网络相近的分类准确率。缺陷检测中不止有缺陷分类问题,同时还会有缺陷目标检测问题。本文针对竹筷的缺陷目标检测问题,首先研究了两种经典的目标检测算法:Faster-RCNN以及SSD,并提出了一种新的缺陷目标检测模型SSD-ch。SSD-ch将SSD与本文所提出的VGGNet-ch相结合,减少了神经网络中参数的数量,并使得其中的初始特征提取网络更适合提取竹筷的特征。应用在竹筷的目标检测时,训练得到的SSD-ch能够在保持较高mAP的同时,非常明显地提高网络的运行速度。此外本文还针对带纹理的纺织品缺陷位置标注问题,提出了改进的堆叠降噪卷积自编码器算法以及融合自编码器与卷积神经网络的缺陷位置标注算法。这两种算法能够通过构建一组深度较浅、参数较少的神经网络,对缺陷图像进行还原。然后通过将还原后的图像与原图像进行作差、阈值处理等操作,能够较为准确地得到待检测图像中缺陷的像素级精度的具体位置。},
+}
+
+@phdthesis{p9,
+  title={面向室外图像的人体姿态估计算法研究},
+  author={程正涛},
+  school={哈尔滨工业大学},
+  year={2019},
+ abstract={基于图像的人体姿态估计是指从图像中检测人体各部分的位置并计算其方向和尺度信息的过程,计算的结果分为二维和三维两种情况,本文主要研究单张室外RGB图像的三维人体姿态估计问题,即计算在单张RGB图像中人体各关节点的三维坐标信息,重建人体的三维姿态模型.但是由于数据集标注困难,在三维人体姿态估计领域,缺少室外非受限场景下采集的具有三维信息标注的数据集.针对数据集缺失问题,本课题借鉴一种基于弱监督迁移学习进行室外图像的三维人体姿态估计的方法,以室外复杂场景下具有二维信息标注的数据集和具有三维信息的室内数据集同时作为训练数据,得到一个端到端的三维人体姿态估计模型,实现对室外复杂场景下的三维人体姿态模型的重建.在模型架构方面,弱监督迁移学习采用两阶段方法,2D姿态估计子模型采用堆叠沙漏模型完成2D姿态估计和主要的特征提取工作,输出的2D姿态信息和中间特征将会共享给深度回归模型,进行深度信息的回归.本文研究分析了弱监督迁移学习方法的基本原理和流程,并多次使用相同参数对模型进行训练和测试,发现模型具有收敛曲线波动大,训练及测试结果差异大的特点.在迁移学习领域,提取的特征是否"普适"对于迁移学习模型的精度和鲁棒性有很大影响.所以为提高模型精度和模型鲁棒性,本文借鉴自步学习思想提出了一种自步式迁移学习方法,考虑训练样本输入顺序对最终模型性能及鲁棒性的影响,"由易到难,先快后慢"的对样本空间进行学习,克服了模型鲁棒性差的问题,同时一定程度提升了模型精度.深度回归子模型采用堆叠沙漏模型提取的中间特征对深度信息进行回归,但堆叠沙漏模型主要解决二维姿态估计问题,中间特征对深度信息表达能力较弱.本文借鉴SENet模块结构,提出反馈式特征权重重分配策略,不仅增强特征深度信息表达能力,而且增强前后样本特征关联性,提升模型鲁棒性.同时在上采样阶段采用双线性插值方法,增强模型特征表达能力,为深度回归环节提供了良好的基础.本文主要使用MPII,Human3.6M公开数据集进行训练,使用Human3.6M,MPI-INF-3DHP公开数据集的测试集进行模型测试.实验结果证实了本文改进后的自步式迁移学习模型能够有效提升人体姿态估计模型的重建精度.在Human3.6M公开数据集上进行测试时MPJPE为60.69mm,PCKh达到92.3%,相对基准模型分别提升了4.21 mm和0.7%.在MPI-INF-3DHP公开数据集上进行测试时MPJPE为41.35mm,PCKh达到90.84%,相对基准模型分别提升了17.35 mm和6.22%.},
+}
+
+@article{p8,
+  title={Exploiting temporal information for 3D pose estimation},
+  author={ Hossain, Mir Rayat Imtiaz  and  Little, James J },
+  journal={Springer, Cham},
+  year={2017},
+ abstract={In this work, we address the problem of 3D human pose estimation from a sequence of 2D human poses. Although the recent success of deep networks has led many state-of-the-art methods for 3D pose estimation to train deep networks end-to-end to predict from images directly, the top-performing approaches have shown the effectiveness of dividing the task of 3D pose estimation into two steps: using a state-of-the-art 2D pose estimator to estimate the 2D pose from images and then mapping them into 3D space. They also showed that a low-dimensional representation like 2D locations of a set of joints can be discriminative enough to estimate 3D pose with high accuracy. However, estimation of 3D pose for individual frames leads to temporally incoherent estimates due to independent error in each frame causing jitter. Therefore, in this work we utilize the temporal information across a sequence of 2D joint locations to estimate a sequence of 3D poses. We designed a sequence-to-sequence network composed of layer-normalized LSTM units with shortcut connections connecting the input to the output on the decoder side and imposed temporal smoothness constraint during training. We found that the knowledge of temporal consistency improves the best reported result on Human3.6M dataset by approximately 12.2\% 12.2\%  and helps our network to recover temporally consistent 3D poses over a sequence of images even when the 2D pose detector fails.},
+}
+
+@article{p7,
+  title={2D/3D Pose Estimation and Action Recognition using Multitask Deep Learning},
+  author={ Luvizon, D. C.  and  Picard, D.  and  Tabia, H. },
+  journal={IEEE},
+  year={2018},
+ abstract={Action recognition and human pose estimation are closely related but both problems are generally handled as distinct tasks in the literature. In this work, we propose a multitask framework for jointly 2D and 3D pose estimation from still images and human action recognition from video sequences. We show that a single architecture can be used to solve the two problems in an efficient way and still achieves state-of-the-art results. Additionally, we demonstrate that optimization from end-to-end leads to significantly higher accuracy than separated learning. The proposed architecture can be trained with data from different categories simultaneously in a seamlessly way. The reported results on four datasets (MPII, Human3.6M, Penn Action and NTU) demonstrate the effectiveness of our method on the targeted tasks.},
+}
+
+@inproceedings{p6,
+  title={3D Human Pose Estimation in the Wild by Adversarial Learning},
+  author={ Yang, W.  and  Ouyang, W.  and  Wang, X.  and  Ren, J.  and  Li, H.  and  Wang, X. },
+  booktitle={2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2018},
+ abstract={Recently, remarkable advances have been achieved in 3D human pose estimation from monocular images because of the powerful Deep Convolutional Neural Networks (DCNNs). Despite their success on large-scale datasets collected in the constrained lab environment, it is difficult to obtain the 3D pose annotations for in-the-wild images. Therefore, 3D human pose estimation in the wild is still a challenge. In this paper, we propose an adversarial learning framework, which distills the 3D human pose structures learned from the fully annotated dataset to in-the-wild images with only 2D pose annotations. Instead of defining hard-coded rules to constrain the pose estimation results, we design a novel multi-source discriminator to distinguish the predicted 3D poses from the ground-truth, which helps to enforce the pose estimator to generate anthropometrically valid poses even with images in the wild. We also observe that a carefully designed information source for the discriminator is essential to boost the performance. Thus, we design a geometric descriptor, which computes the pairwise relative locations and distances between body joints, as a new information source for the discriminator. The efficacy of our adversarial learning framework with the new geometric descriptor has been demonstrated through extensive experiments on widely used public benchmarks. Our approach significantly improves the performance compared with previous state-of-the-art approaches.},
+}
+
+@inproceedings{p5,
+  title={Ordinal Depth Supervision for 3D Human Pose Estimation},
+  author={ Pavlakos, G.  and  Zhou, X.  and  Daniilidis, K. },
+  booktitle={2018 IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2018},
+ abstract={Our ability to train end-to-end systems for 3D human pose estimation from single images is currently constrained by the limited availability of 3D annotations for natural im- ages. Most datasets are captured using Motion Capture (MoCap) systems in a studio setting and it is difficult to reach the variability of 2D human pose datasets, like MPII or LSP. To alleviate the need for accurate 3D ground truth, we propose to use a weaker supervision signal provided by the ordinal depths of human joints. This information can be acquired by human annotators for a wide range of images and poses. We showcase the effectiveness and flexibility of training Convolutional Networks (ConvNets) with these or- dinal relations in different settings, always achieving com- petitive performance with ConvNets trained with accurate 3D joint coordinates. Additionally, to demonstrate the po- tential of the approach, we augment the popular LSP and MPII datasets with ordinal depth annotations. This exten- sion allows us to present quantitative and qualitative evalu- ation in non-studio conditions. Simultaneously, these ordi- nal annotations can be easily incorporated in the training procedure of typical ConvNets for 3D human pose. Through this inclusion we achieve new state-of-the-art performance for the relevant benchmarks and validate the effectiveness of ordinal depth supervision for 3D human pose.},
+}
+
+@article{p4,
+  title={Learning Pose Grammar to Encode Human Body Configuration for 3D Pose Estimation},
+  author={ Fang, H.  and  Xu, Y.  and  Wang, W.  and  Liu, X.  and  Zhu, S. C. },
+  year={2017},
+ abstract={In this paper, we propose a pose grammar to tackle the problem of 3D human pose estimation. Our model directly takes 2D pose as input and learns a generalized 2D-3D mapping function. The proposed model consists of a base network which efficiently captures pose-aligned features and a hierarchy of Bi-directional RNNs (BRNN) on the top to explicitly incorporate a set of knowledge regarding human body configuration (i.e., kinematics, symmetry, motor coordination). The proposed model thus enforces high-level constraints over human poses. In learning, we develop a pose sample simulator to augment training samples in virtual camera views, which further improves our model generalizability. We validate our method on public 3D human pose benchmarks and propose a new evaluation protocol working on cross-view setting to verify the generalization capability of different methods. We empirically observe that most state-of-the-art methods encounter difficulty under such setting while our method can well handle such challenges.},
+}
+
+@article{p3,
+  title={Compositional Human Pose Regression},
+  author={ Sun, X.  and  Shang, J.  and  Liang, S.  and  Wei, Y. },
+  journal={Computer Vision and Image Understanding},
+  year={2017},
+ abstract={Regression based methods are not performing as well as detection based methods for human pose estimation. A central problem is that the structural information in the pose is not well exploited in the previous regression methods. In this work, we propose a structure-aware regression approach. It adopts a reparameterized pose representation using bones instead of joints. It exploits the joint connection structure to define a compositional loss function that encodes the long range interactions in the pose. It is simple, effective, and general for both 2D and 3D pose estimation in a unified setting. Comprehensive evaluation validates the effectiveness of our approach. It significantly advances the state-of-the-art on Human3.6M [20] and is competitive with state-of-the-art results on MPII [3].},
+}
+
+@inproceedings{p2,
+  title={Learning to Fuse 2D and 3D Image Cues for Monocular Body Pose Estimation},
+  author={ Tekin, B.  and P Márquez-Neila and  Salzmann, M.  and  Fua, P. },
+  booktitle={IEEE Computer Society},
+  year={2016},
+ abstract={Most recent approaches to monocular 3D human pose estimation rely on Deep Learning. They typically involve regressing from an image to either 3D joint coordinates directly or 2D joint locations from which 3D coordinates are inferred. Both approaches have their strengths and weaknesses and we therefore propose a novel architecture designed to deliver the best of both worlds by performing both simultaneously and fusing the information along the way. At the heart of our framework is a trainable fusion scheme that learns how to fuse the information optimally instead of being hand-designed. This yields significant improvements upon the state-of-the-art on standard 3D human pose estimation benchmarks.},
+}
+
+@inproceedings{p1,
+  title={Coarse-to-Fine Volumetric Prediction for Single-Image 3D Human Pose},
+  author={ Pavlakos, G.  and  Zhou, X.  and  Derpanis, K. G.  and  Daniilidis, K. },
+  booktitle={IEEE Conference on Computer Vision & Pattern Recognition},
+  year={2017},
+ abstract={This paper addresses the challenge of 3D human pose estimation from a single color image. Despite the general success of the end-to-end learning paradigm, top performing approaches employ a two-step solution consisting of a Convolutional Network (ConvNet) for 2D joint localization and a subsequent optimization step to recover 3D pose. In this paper, we identify the representation of 3D pose as a critical issue with current ConvNet approaches and make two important contributions towards validating the value of end-to-end learning for this task. First, we propose a fine discretization of the 3D space around the subject and train a ConvNet to predict per voxel likelihoods for each joint. This creates a natural representation for 3D pose and greatly improves performance over the direct regression of joint coordinates. Second, to further improve upon initial estimates, we employ a coarse-to-fine prediction scheme. This step addresses the large dimensionality increase and enables iterative refinement and repeated processing of the image features. The proposed approach outperforms all state-of-the-art methods on standard benchmarks achieving a relative error reduction greater than 30% on average. Additionally, we investigate using our volumetric representation in a related architecture which is suboptimal compared to our end-to-end approach, but is of practical interest, since it enables training when no image with corresponding 3D groundtruth is available, and allows us to present compelling results for in-the-wild images.},
 }
 
 
-%http://qikan.cqvip.com/Qikan/Article/Detail?id=38414303
-@Article{json_perf,
-	title = "JSON数据传输效率研究",
-	author = "高静，段会川",
-	journal= "《计算机工程与设计》2011年第7期2267-2270",
-	year = "2011"
-}
 
-@Article{resnet,
-	title = {Deep Residual Learning for Image Recognition},
-	author = {Kaiming He, Xiangyu Zhang},
-	journal={arXiv preprint arXiv:1512.03385},
-	year = {2015}
-}
+

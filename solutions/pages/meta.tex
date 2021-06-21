@@ -10,7 +10,7 @@
 
 % 学院，专业，班级，中文，本科毕业论文需要
 \ccollege{电信}   % TODO 电信 or 计算机
-\cmajor{计算机科学与技术(少年班)}
+\cmajor{计算机科学与技术}
 \cclass{计算机少71}
 
 % 设计所在单位，中文，本科毕业论文需要
@@ -80,12 +80,13 @@
 % 摘要，英文。段间空行
 \eabstract{
 
-Computer vision is one of the important pillar technologies of human society industry.With the wide application of deep learning, the task of Human Pose Estimation (HPE) in computer vision has been injected with new vitality.At the same time, with the wide spread of camera-based computer vision solutions, human pose estimation has a wide range of applications in human-computer interaction, games, virtual reality, video surveillance, motion analysis, medical assistance and other fields.In this paper, based on the video collection of monocular camera, the deep neural network is used to complete the single human body pose estimation task in the video sequence, and the 3D animation of human body model is made effectively by using the extracted actions.
+Computer vision is one of the important pillar technologies of human society industry. With the wide application of deep learning, the task of human pose estimation (HPE) in computer vision field has been injected with new vitality. At the same time, with the wide spread of camera-based computer vision solutions, human pose estimation has a wide range of applications in human-computer interaction, games, virtual reality, video surveillance, motion analysis, medical assistance and other fields. In this thesis, based on the video collection of monocular camera, the deep neural network is used to complete the single human body pose estimation task in the video sequence, and the 3D animation of human body model is made effectively by using the extracted actions.
 
-There are many subsubjects of body pose estimation, and the work of this paper mainly focuses on the three-dimensional body pose of monocular single-person RBG video.The work of this paper selects the classical two-step lifting idea in 3D body pose estimation. First, the body nodes in the video or image are identified to predict the more accurate 2D coordinates, and then the 3D coordinates of the nodes are predicted on the basis of the 2D coordinate results.
+There are many subjects of body pose estimation, and the work of this thesis mainly focuses on the 3D body pose of monocular single-person RBG video.The work of this thesis selects the classical two-step lifting idea in 3D body pose estimation. First, the body nodes in the video or image are identified to predict the more accurate 2D coordinates, and then the 3D coordinates of the nodes are predicted on the basis of the 2D coordinate results.
 
-Resnet structure and deconvolution layer are used to estimate the two-dimensional body posture. Heat map is generated to predict the two-dimensional coordinates.In 3D body pose estimation, a one-dimensional void convolutional network is used to process the time sequence information between video sequences, and finally generates the 3D coordinate sequence of human body nodes.
+ResNet and deconvolution layer are used to estimate the 2D pose. Heat map is generated to predict the 2D coordinates. In 3D human pose estimation, a one-dimensional void convolutional network is used to process the time sequence information between video sequences, and finally generates the 3D coordinate sequence of human body nodes.
 
-Finally, the actual application scene of human pose estimation is positioned in motion capture 3D character animation.Using the above network model, pose sequence is extracted for daily single person video.After converting it into motion capture record file type, action binding is carried out on the human model to produce vivid and smooth 3D character animation with high restoring degree.
+Finally, the actual application scene of human pose estimation is positioned in motion capture 3D character animation. Using the above network model, pose sequence is extracted for daily single person video. After converting it into motion capture record file type, action rigging is carried out on the human model to produce vivid 3D character animation.
+
 
 }
