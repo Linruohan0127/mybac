@@ -492,7 +492,7 @@
 \ifxjtu@bigskip
 \linespread{1.5} \selectfont
 \else
-\linespread{0.93} \selectfont
+\linespread{0.9} \selectfont
 \fi
 
 \renewcommand\footnoterule{\vspace*{-3pt}% eggache!
