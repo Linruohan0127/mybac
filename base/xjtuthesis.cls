@@ -474,7 +474,9 @@
 
 \let\oldtableofcontents=\tableofcontents
 \def\tableofcontents{
+\begin{spacing}{0.87}
 \oldtableofcontents
+\end{spacing}
 }
 
 % The ``compact'' option eliminates the empty pages
@@ -490,7 +492,7 @@
 \ifxjtu@bigskip
 \linespread{1.5} \selectfont
 \else
-\linespread{1.0} \selectfont
+\linespread{0.93} \selectfont
 \fi
 
 \renewcommand\footnoterule{\vspace*{-3pt}% eggache!
